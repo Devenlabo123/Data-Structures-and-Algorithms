@@ -79,7 +79,6 @@ def decrease_key(arr, i, key):
     # if it is then swap child and parent and repeat loop
     # Continue loop untill parent of the decreased key is smaller than the decreased key
     while i > 0 and arr[get_parent_index(i)] > arr[i]:
-        print(arr)
         arr[i], arr[get_parent_index(i)] = arr[get_parent_index(i)], arr[i]
         i = get_parent_index(i)
         
