@@ -21,11 +21,29 @@ def heapify(arr, n, i):
   
         # Heapify the root. 
         heapify(arr, n, largest) 
-        
-arrs = [7,11,12,14,15,7,8,1] 
-size = len(arrs)
-# Build a maxheap
-for i in range(size, -1, -1):
-    heapify(arrs, size, i)
 
-print(arrs)
+
+def build_min_heap(arr):
+    heap_size = len(arr)
+    for i in range(heap_size, -1, -1): 
+        heapify(arr, heap_size, i) 
+
+
+arr = [7, 11, 12, 14, 15, 7, 8, 1]
+build_min_heap(arr)
+print(arr)
+
+#test for random set of numbers non power of two
+arr = [8, 5, 4, 33, 5, 66, 8, 102, 130, 123, 64, 705, 124]
+build_min_heap(arr)
+print(arr)
+
+#test for reverse sorted non power of two
+arr = [1, 2, 3, 4, 5, 6, 7]
+build_min_heap(arr)
+print(arr)
+
+#test for pre sorted non power of two
+arr = [7, 6, 5, 4, 3, 2, 1]
+build_min_heap(arr)
+print(arr)
