@@ -25,9 +25,11 @@ def heapify(arr, n, i):
 
 def build_min_heap(arr):
     heap_size = len(arr)
+    
     for i in range(heap_size, -1, -1): 
         heapify(arr, heap_size, i) 
 
+        
 # Get index of parent node given child index
 def get_parent_index(index):
     if index == 1 or index == 2:
@@ -82,15 +84,14 @@ def decrease_key(arr, i, key):
         arr[i], arr[get_parent_index(i)] = arr[get_parent_index(i)], arr[i]
         i = get_parent_index(i)
         
-## MIN-HEAP-INSERT
+# MIN-HEAP-INSERT
 def insert(arr, value):
-    n = len(arr)
     arr.append(float('inf'))
+    n = len(arr)
+
 
     #Place inserted value into correct place
-    decrease_key(arr, n - 1, value)
-    
-    
+    decrease_key(arr, n - 1, value)    
     
    
 #test all methods on power of two
