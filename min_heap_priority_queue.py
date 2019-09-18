@@ -91,3 +91,45 @@ def insert(arr, value):
     decrease_key(arr, n - 1, value)
     
     
+    
+   
+#test all methods on power of two
+arr = [7, 4, 9, 5, 10, 14, 16, 54]
+build_min_heap(arr)
+
+decrease_key(arr, 7, 2)
+print("2 inserted at last position, should bubble to top")
+print(arr)
+
+print("remove smallest from array, still maintain property")
+extract_min(arr)
+
+print(arr)
+
+print("insert 1 into array, should bubble to top")
+insert(arr, 1)
+print(arr)
+
+print("return the minimum value of the heap")
+print(minimum(arr))
+
+print('\n\n')
+
+#test all methods on NOT power of two
+arr = [7, 4, 9, 5, 10, 16, 14]
+build_min_heap(arr)
+
+decrease_key(arr, 6, 2)
+print("2 inserted at last position, should bubble to top")
+print(arr)
+
+print("remove smallest from array, still maintain property")
+extract_min(arr)
+print(arr)
+
+print("insert 1 into array, should bubble to top")
+insert(arr, 1)
+print(arr)
+
+print("return the minimum value of the heap")
+print(minimum(arr))
