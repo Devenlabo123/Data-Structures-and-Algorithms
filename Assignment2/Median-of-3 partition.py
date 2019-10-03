@@ -10,11 +10,6 @@ def quicksort(arr, start, end):
         quicksort(arr, start, q - 1)
         quicksort(arr, q + 1, end)
 
-
-def chose_median(arr,start,end):
-    rand_values = [random.choice(arr[start:end + 1]), random.choice(arr[start:end + 1]), random.choice(arr[start:end + 1])]
-    pivot_value = statistics.median(rand_values)
-    return pivot_value
     
     
 def partition(arr, start, end):
