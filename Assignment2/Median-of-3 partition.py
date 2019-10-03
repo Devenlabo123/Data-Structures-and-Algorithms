@@ -34,3 +34,8 @@ arr = [12, 7, 15, 3, 7, 8, 19, 2]
 quicksort(arr, 0, len(arr) - 1) 
 for i in range(len(arr)): 
     print (str(arr[i]) + ' ')
+    
+arr1 = [12, 7, 15,-34, 55, 55, 2, 11, 34, 1, 2, 3, 55555, 6453, 215, -1, -43, 3, 7, 8, 19, 55, 2, 7] 
+quicksort(arr, 0, len(arr1) - 1) 
+for i in range(len(arr1)): 
+    print (str(arr1[i]) + ' ')
