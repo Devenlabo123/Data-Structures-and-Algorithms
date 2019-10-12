@@ -98,6 +98,7 @@ def tree_delete_transplant(delete_node):
             transplant(y, y.r_child)
             y.r_child = delete_node.r_child
             y.r_child.parent = y
+        
         transplant(delete_node,y)
         y.l_child = delete_node.l_child
         y.l_child.parent = y
@@ -110,6 +111,7 @@ def transplant(delete_node, delete_node_child):
         delete_node.parent.l_child = delete_node_child
     else:
         delete_node.parent.r_child = delete_node_child
+        
     if delete_node_child is not None:
         delete_node_child.parent = delete_node.parent
     
@@ -122,14 +124,15 @@ def successor(root, value):
         return tree_max(root)
     
     elif pred_node.r_child is not None:
-        return tree_min(pred_node.r_child)
-   
+        return tree_min(pred_node.r_child)  
     
     parent = pred_node.parent
     child = pred_node
+    
     while parent is not None and child is parent.r_child:
         child = parent
         parent = child.parent
+        
     return parent
     
                 
