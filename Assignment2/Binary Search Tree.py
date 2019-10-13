@@ -111,16 +111,16 @@ def transplant(delete_node, delete_node_child):
 
 #### 12.3-5 ####
 def successor(root, value):
-    pred_node = binary_search(root, value)
+    node = binary_search(root, value)
 
     if value == tree_max(root).data:
         return tree_max(root)
     
-    elif pred_node.r_child is not None:
-        return tree_min(pred_node.r_child)  
+    elif node.r_child is not None:
+        return tree_min(node.r_child)  
     
-    parent = pred_node.parent
-    child = pred_node
+    parent = node.parent
+    child = node
     
     while parent is not None and child is parent.r_child:
         child = parent
