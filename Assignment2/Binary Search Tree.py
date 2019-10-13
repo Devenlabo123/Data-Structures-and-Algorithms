@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Oct  6 18:09:46 2019
-
-@author: Deven
-"""
-
 class Node:
     def __init__(self, val):
         self.parent = None
