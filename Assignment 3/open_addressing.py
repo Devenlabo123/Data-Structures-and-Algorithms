@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Nov 12 19:06:30 2019
-
-@author: Deven
-"""
-
-
 def hash_search(current_hash, val):
     i = 0
     o = 11
@@ -39,7 +31,7 @@ def hash_insert(current_hash, val):
         i = i + 1
         o = o + 1
     
-    print('hash overflow')
+    print('hash overflow, value not added')
     return
     
     
@@ -132,7 +124,6 @@ def halve_hash(current_hash):
     
     for i in range(0, len(a)):
         if a[i] != None and a[i] != 'DELETED':
-            print('added ' + str(a[i]))
             hash_insert(current_hash, a[i])
     return
 
@@ -182,6 +173,8 @@ print('delete 22332')
 delete_value(d, 22332)
 print(d)
 print()
+
+
 print('second test')
 import random
 
@@ -189,17 +182,28 @@ test_hash = {}
 for i in range(5):
     test_hash[i] = None
 
-for i in range(50):
+for i in range(30):
    # test_hash[i] = random.randrange(1, 101, 1)
    r = random.randrange(1, 101, 1)
    print('insert: ' + str(r) )
    hash_insert(test_hash, r)
    print(test_hash)
+   print()
    
-for i in range(42):
+   
+for i in range(70):
    # test_hash[i] = random.randrange(1, 101, 1)
+  
+       
+   if test_hash[i] == None:
+       continue
+       
    print('Delete: ' + str(test_hash[i]) )
    delete_value(test_hash, test_hash[i])
    print(test_hash)
    
-print(test_hash)
+   if i >= len(test_hash):
+      break
+       
+   print()
+   
